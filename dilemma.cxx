@@ -9,6 +9,7 @@ typedef vector<int> vi;
 #define mod (int )(1e9 + 7)
 const int MAXN = 2e5 + 5;
 #define MAX 100007
+//avetqvtbybybv4wtqveyvqyv
 const int N = 2e5 + 10;
 const int MX = 1e7+5;
 bool check(ll x, vi&a, vi&b, ll n){
