@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
-// hi this is for temp open sources
-// for the second tst e sd
+
 using namespace std; 
 #define ll long long 
 #define nl '\n'
