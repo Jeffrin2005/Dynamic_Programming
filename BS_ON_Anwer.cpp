@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-special array leetcode 
+special array leetcode problem 
     int specialArray(vector<int>& nums) {
        sort(nums.begin(),nums.end());
        int low = 0 , high = *max_element(nums.begin(),nums.end());
