@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-special array leetcode problem 
+special array leetcode    problem using binary search on answer 
     int specialArray(vector<int>& nums) {
        sort(nums.begin(),nums.end());
        int low = 0 , high = *max_element(nums.begin(),nums.end());
