@@ -5,7 +5,7 @@ public:
         for (int j = 1; j <= 5; ++j) {
             dp[0][j] = 1;// base case if we reach n return 1
         }
-        // a e i o u 
+        // a e i o     u 
         for (int i = 1; i <= n; ++i){
             for (int j = 1; j <= 5; ++j){  // O(5)
                 // /        take        +   notake 
