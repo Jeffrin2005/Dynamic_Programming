@@ -1,23 +1,20 @@
+
 class Solution {
 public:
-    int countVowelStrings(int n) {
-        vector<vector<int>> dp(n + 1, vector<int>(6, 0));
-        for (int j = 1; j <= 5; ++j) {
-            dp[0][j] = 1;// base case if we reach n return 1
-        }
-        // a e i o     u 
-        for (int i = 1; i <= n; ++i){
-            for (int j = 1; j <= 5; ++j){  // O(5)
-                // /        take        +   notake 
-                // pick = 	pick= count(i, n-1, vowels);
-                //  notPick= count(i+1, n, vowels);
+    int count(int i, int n, string &vowels, std::vector<std::vector<int>>& dp) {
+        if (n == 0) return 1; 
+        if (i >= 5) return 0;
+        if (dp[i][n] != -1) return dp[i][n];
+        int pick,not_pick;
+         pick= count(i, n-1, vowels, dp);
+        not_pick =  count(i+1, n, vowels, dp);
+        dp[i][n] =  pick + not_pick;
+        return dp[i][n];
+    }
 
-                //       /        nottake    +    take 
-                dp[i][j] = dp[i][j - 1] + dp[i - 1][j];
-            }
-        }
-        return dp[n][5];
+    int countVowelStrings(int n){
+        string vowels = "aeiou";
+        vector<vector<int>> dp(5,vector<int>(n + 1, -1));
+        return count(0, n, vowels, dp);
     }
 };
-   
-   
