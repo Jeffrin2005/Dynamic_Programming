@@ -1,6 +1,7 @@
 
 class Solution {
 private:
+
     void check(vector<string>& ans, int n, int open, int close, string curr) {
         if (curr.size() == n * 2) {
             ans.push_back(curr);
