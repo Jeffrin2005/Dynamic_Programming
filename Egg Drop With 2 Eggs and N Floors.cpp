@@ -1,3 +1,41 @@
+
+
+class Solution {
+public:
+    int twoEggDrop(int n) {
+        // Create a memoization table initialized with -1 (indicating uncomputed values)
+        std::vector<std::vector<int>> memo(3, std::vector<int>(n + 1, -1));
+        return eggDrop(2, n, memo);
+    }
+
+private:
+    int eggDrop(int eggs, int floors, std::vector<std::vector<int>>& memo) {
+        // Base cases
+        if (floors == 0 || floors == 1) return floors;
+        if (eggs == 1) return floors;
+
+        // Check if already computed
+        if (memo[eggs][floors] != -1) return memo[eggs][floors];
+
+        int minDrops = INT_MAX;
+
+        // Use a linear search to find the minimum number of drops needed in the worst case
+        for (int x = 1; x <= floors; ++x) {
+            int breakCount = eggDrop(eggs - 1, x - 1, memo); // Egg breaks
+            int noBreakCount = eggDrop(eggs, floors - x, memo); // Egg doesn't break
+
+            // We need the worst case from both scenarios
+            int worst = 1 + std::max(breakCount, noBreakCount);
+
+            // We are minimizing the worst case
+            minDrops = std::min(minDrops, worst);
+        }
+
+        // Memoize and return the result
+        memo[eggs][floors] = minDrops;
+        return minDrops;
+    }
+};
 class Solution {
 public:
     int twoEggDrop(int n) {
