@@ -4,7 +4,6 @@ ll solve(vector<ll>& arr) {
     ll s = 0;
     vector<vector<ll>> dp(num + 1, vector<ll>(2, 0));
     dp[num] = {0, 1};
-    
     for(ll i = num - 1; i >= 0; i--){
         ll t = dp[i + 1][0];
         ll c = dp[i + 1][1];
