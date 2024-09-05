@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int twoEggDrop(int n) {
+    int twoEggDrop(int n){
         // Create a memoization table initialized with -1 (indicating uncomputed values)
         std::vector<std::vector<int>> memo(3, std::vector<int>(n + 1, -1));
         return eggDrop(2, n, memo);
