@@ -29,4 +29,28 @@ public:
         vector<int> dp(n, -1);
         return check(s, 0, n, dp);
     }
+};// TABULATION
+class Solution {
+public:
+    int numDecodings(string s) {
+        int n = s.size();
+        // dp[i] will store the number of ways to decode the substring s[0..i-1]
+        vector<int> dp(n + 1, 0);
+        dp[0] = 1; 
+        // Handle the first character
+        dp[1] = (s[0] != '0') ? 1 : 0;
+        for(int i = 2; i <= n; i++){
+            // Check for single-digit decode (s[i-1])
+            if(s[i-1] != '0'){
+                dp[i]+=dp[i-1];
+            }
+            // Check for two-digit decode (s[i-2] and s[i-1])
+            int twoDigit = stoi(s.substr(i-2, 2));
+            if(twoDigit >= 10 && twoDigit <= 26){
+                dp[i]+=dp[i-2];
+            }
+        }
+
+        return dp[n];
+    }
 };
