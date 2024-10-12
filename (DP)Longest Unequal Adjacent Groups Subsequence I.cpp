@@ -3,6 +3,7 @@
 // Let's walk through how the code processes this input to produce the output ["e", "b"].
 // Step-by-Step Execution:
 // 1. Initialization:
+
 // ans starts as an empty vector.
 // i is initialized to 1, j is the size of groups (3), and store is set to the group of the first word (groups[0] which is 0).
 // The first word "e" is added to ans because it's the starting point.
