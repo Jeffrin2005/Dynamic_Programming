@@ -3,7 +3,6 @@ int mod = 1e9 + 7;
 int findWays(vector<int>& arr, int k) {
     int n = arr.size();
     vector<vector<int>> dp(n + 1, vector<int>(k + 1, 0));
-
     for (int i = 0; i < n; i++) {
         dp[i][0] = 1;
     }
