@@ -9,6 +9,7 @@ typedef vector<int> vi;
 #define stt string 
 #define ll  long long 
 #define ed end
+
 #define vec vector
 #define sz(a) int((a).size())
 #define pp pop_back
