@@ -5,6 +5,7 @@ class Solution {
 private:
     int check(int row, int col, vector<vector<int>>& dp) {
         if (row == 0 || col == row) return 1; 
+        
         if (dp[row][col] != -1) return dp[row][col];
         int left = (col > 0) ? check(row - 1, col - 1, dp) : 0; 
         int right = (col < row) ? check(row - 1, col, dp) : 0; 
