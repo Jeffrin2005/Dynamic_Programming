@@ -9,6 +9,7 @@ public:
             dp[i] = dp[i - 1];
             int prod = 1;
             for(int j = 0; j < i; j++)
+                
                 prod = prod * temp[j];
             dp[i] += prod; 
         }
