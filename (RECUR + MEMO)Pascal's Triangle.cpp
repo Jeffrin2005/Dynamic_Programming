@@ -12,6 +12,7 @@ private:
 
         dp[row][col] = left + right; 
         return dp[row][col];
+        
     }
 public:
     vector<vector<int>> generate(int n) {
