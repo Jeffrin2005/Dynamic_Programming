@@ -5,6 +5,7 @@ private:
         if(dp[i] != -1) return dp[i];
         for(int x=1; x<i; x++){
             if(i%x == 0){
+                
                 if((check(i - x, dp) == false)){
                     dp[i] = 1;
                     return true; 
