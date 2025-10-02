@@ -1,6 +1,7 @@
 class Solution {
 private:
     // s_index = i;
+
     // t_index = j; 
     bool check(string &s, string &t,int i, int j, vector<vector<int>>&dp){
         if(i == s.size()) return true;
