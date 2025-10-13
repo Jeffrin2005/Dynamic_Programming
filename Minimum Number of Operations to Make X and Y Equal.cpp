@@ -3,7 +3,8 @@ public:
     int solve(int x, int y, vector<int>& dp) {
         if (x <= y) return y - x;
         if (dp[x] != -1) return dp[x];
-        int res = abs(x - y);                                 // case 1
+        int res = abs(x - y);            
+        // case 1
         res = min(res, 1 + x % 5 + solve(x / 5, y, dp));      // case 2
         res = min(res, 1 + (5 - x % 5) + solve(x / 5 + 1, y, dp)); // case 3
         res = min(res, 1 + x % 11 + solve(x / 11, y, dp));   // case 4
