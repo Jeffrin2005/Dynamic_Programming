@@ -12,6 +12,7 @@ const int N = 3e6 + 10;
 const int MX = 1e7+5;
 const int MAXN = 2e5 + 5;
 #define Pi 3.14159265359
+
 string pi = "314159265358979323846264338327";
 #define rep(i,a,n) for(ll i=a;i<n;i++)
 #define MOD 1000000007
