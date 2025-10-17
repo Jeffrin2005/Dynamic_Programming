@@ -5,6 +5,7 @@ private:
         if (i >= n1) return 0;
         if (dp[i] != -1) return dp[i];
         int min_price = prices[i];
+        
         int max_profit = 0;
         for (int sellday = i + 1; sellday < n1; sellday++) {
             max_profit = std::max(max_profit, prices[sellday] - min_price);
