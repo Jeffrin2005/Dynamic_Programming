@@ -8,9 +8,11 @@
 // 3. Breaking Down the Recursion:
 // To compute check(3, dp), it needs check(2, dp), check(1, dp), and check(0, dp).
 // check(2, dp) returns 1 immediately because it's a base case.
-// check(1, dp) also returns 1 immediately (base case).
+// check(1, dp) also returns 1 immediately (base case)
+.
 // check(0, dp) returns 0 (base case).
 // Now, check(3, dp) can be computed as 1 + 1 + 0 = 2. This value is stored in dp[3].
+
 // 4. Continuing the Recursion:
 // Returning to the computation of check(4, dp), we now have:
 // check(3, dp) is 2 (from memoization).
