@@ -7,6 +7,7 @@ private:
         int two_climb = cost[i] + check(i + 2, cost, n , dp);
         dp[i] = min(one_climb, two_climb);
         return dp[i];
+        
     }
 public:
     int minCostClimbingStairs(vector<int>& cost) {
