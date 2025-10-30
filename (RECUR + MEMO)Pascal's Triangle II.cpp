@@ -25,6 +25,7 @@
 // j = 3:
 // check(3, 3, dp) is called.
 // Base case if (row == 0 || col == row) applies since col == row.
+
 // dp[3][3] is set to 1.
 //The result vector is filled based on the computed values in dp[3][...], resulting in [1, 3, 3, 1].
 class Solution {
