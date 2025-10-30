@@ -3,6 +3,7 @@
 //   [1,  1, -1, -1],
 //   [1,  2,  1, -1],
 //   [1,  3,  3,  1]
+
 // ]
 
 // We iterate over each column j from 0 to rowIndex (0 to 3 in this case).
