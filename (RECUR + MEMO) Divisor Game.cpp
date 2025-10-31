@@ -7,6 +7,7 @@ private:
             if(i%x == 0){
                 
                 if((check(i - x, dp) == false)){
+                    
                     dp[i] = 1;
                     return true; 
                  }
