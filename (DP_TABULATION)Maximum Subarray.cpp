@@ -3,6 +3,7 @@ public:
     int maxSubArray(vector<int>& v) {
          int n = v.size();
         if(n == 0) return 0;
+        
        //dp[i] represents the maximum subarray sum ending at index i
         vector<int>dp(n, 0);
         dp[0] = v[0];
